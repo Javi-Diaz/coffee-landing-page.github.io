@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Coffee Landing Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section>
+		<div class="circle"></div>
+			<header>
+				<a href="#" class="logo"><img src="images/logo.png" class="img-logo"></a>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Menu</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>	
+			</header>
+
+			<div class="content">
+				<div class="textBox">
+					<h2>It´s not just coffee <br>It´s <span>Our Coffee</span></h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<a href="#">Learn More</a>
+				</div>
+				<div class="imgBox">
+					<img src="images/coffee1.png" class="coffee">
+				</div>
+			</div>
+
+			<ul class="thumb">
+				<li><img src="images/thumb1.png" onclick="imgSlider('images/coffee1.png');changeCircleColor('#f85b4a')"></li>
+				<li><img src="images/thumb2.png" onclick="imgSlider('images/coffee2.png');changeCircleColor('#ff9833')"></li>
+				<li><img src="images/thumb3.png" onclick="imgSlider('images/coffee3.png');changeCircleColor('#4a2c12')"></li>
+			</ul>
+			
+			<ul class="social-media">
+				<li><a href="#"><img src="images/facebook.png"></a></li>
+				<li><a href="#"><img src="images/instagram.png"></a></li>
+				<li><a href="#"><img src="images/twitter.png"></a></li>
+			</ul>
+	</section>
+
+	<script type="text/javascript">
+		function imgSlider(anything){
+			document.querySelector('.coffee').src = anything;
+		}
+		function changeCircleColor(color){
+			const circle = document.querySelector('.circle');
+			circle.style.background = color;
+		}
+	</script>
+</body>
+</html>
